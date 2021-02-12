@@ -1,3 +1,5 @@
+/* ircc.c - A minimal irc client */
+
 #include <assert.h>
 #include <limits.h>
 #include <signal.h>
