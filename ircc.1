@@ -1,0 +1,66 @@
+.TH IRCC 1 ircc
+.SH NAME
+ircc \- A Minimal IRC client
+.SH SYNOPSIS
+.B ircc
+.RB [ \-n
+.IR nick ]
+.RB [ \-u
+.IR user ]
+.RB [ \-s
+.IR server ]
+.RB [ \-p
+.IR port ]
+.RB [ \-l
+.IR file ]
+.RB [ \-t ]
+.RB [ \-h ]
+
+.SH DESCRIPTION
+.B ircc
+is a simple, usable, IRC client written in a single >1000 SLOC C file. The display mechanism uses any standard curses library, and has only a couple nessasary features \- such as built in SSl encryption [-t] and history [-f].
+
+.SH VARIBLES
+.TP
+.B IRCPASS
+Used to set server password
+
+.SH OPTIONS
+.TP
+.BI \-n " nick"
+Override the default nick ($IRCNICK)
+.TP
+.BI \-u " user"
+Override the default username ($USER)
+.TP
+.BI \-s " server"
+Overrides the default host (irc.oftc.net)
+.TP
+.BI \-p " port"
+Overrides the default port (6667)
+.TP
+.BI \-l " file"
+Creates log file
+.TP
+.BI \-t
+Use a SSL secure connection
+.TP
+.B \-h
+Display help
+
+.SH COMMANDS
+.TP
+.BI j " #channel"
+Join a channel
+.TP
+.BI l " #channel"
+Leave a channel
+.TP
+.BI m " #[channel|user] message"
+Send a private message to channel or user
+.TP
+.BI r " [anything]"
+Send raw data
+.TP
+.BI q
+Quit application
